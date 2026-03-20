@@ -98,6 +98,12 @@ body {
   background: var(--bg);
 }
 
+.site-header .container,
+.site-footer .container {
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
 .header-inner {
   align-items: center;
 }
@@ -278,19 +284,16 @@ body {
 }
 
 .services-grid .property-card {
-  /* Services are informational cards; keep the cursor consistent. */
   cursor: default;
 }
 
 .services-grid .property-card img {
-  /* Make service photos consistent across the 2-column layout. */
   height: 190px;
   object-fit: cover;
   object-position: center;
 }
 
 .services-grid .property-body {
-  /* Align the text blocks even if image aspect ratios differ. */
   display: flex;
   flex-direction: column;
   min-height: 142px;
@@ -509,7 +512,6 @@ body {
   border: 1px solid var(--border);
   border-radius: var(--radius);
   box-shadow: var(--shadow-sm);
-  /* Allow overlapping avatar to sit outside the card border. */
   overflow: visible;
   padding: 64px 20px 22px;
 }
@@ -535,7 +537,6 @@ body {
   height: 100%;
   border-radius: 999px;
   object-fit: cover;
-  /* Faces are slightly high in the source photos, so nudge down a bit. */
   object-position: center 25%;
   border: 1px solid rgba(2, 6, 23, 0.06);
 }
