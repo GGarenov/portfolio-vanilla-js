@@ -4,6 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portfolio</title>
+    <link rel="preload" as="image" href="assets/images/photo.jpg" />
     <link rel="stylesheet" href="css/base.css" />
   </head>
   <body>
@@ -11,7 +12,9 @@
 
     <header class="site-header">
       <div class="container header-inner">
-        <a class="brand" href="#top" aria-label="Go to top">Your Name</a>
+        <a class="brand" href="#hero" aria-label="Go to hero section"
+          >Your Name</a
+        >
         <nav aria-label="Primary navigation">
           <ul class="nav-list">
             <li><a href="#services">Services</a></li>
@@ -34,17 +37,23 @@
             </p>
             <div class="hero-actions">
               <a class="btn btn-primary" href="#services">Explore services</a>
-              <a class="btn btn-secondary" href="https://bookings.microsoft.com/" rel="noopener">Book a call</a>
+              <a
+                class="btn btn-secondary"
+                href="https://bookings.microsoft.com/"
+                rel="noopener"
+                >Book a call</a
+              >
             </div>
           </div>
 
-          <div class="hero-media" aria-hidden="true">
+          <div class="hero-media">
             <img
-              src="assets/images/photo.jpg"
-              alt=""
+              src="assets/img/photo.png"
+              alt="Portrait of the frontend developer"
               width="520"
               height="520"
-              loading="lazy"
+              fetchpriority="high"
+              decoding="async"
             />
           </div>
         </div>
@@ -63,11 +72,16 @@
           <div class="accordion">
             <details>
               <summary>What do you build?</summary>
-              <p>Static, responsive one-page websites based on Figma designs.</p>
+              <p>
+                Static, responsive one-page websites based on Figma designs.
+              </p>
             </details>
             <details>
               <summary>Do you use frameworks?</summary>
-              <p>No. Only HTML5, modern CSS, and minimal vanilla JavaScript where needed.</p>
+              <p>
+                No. Only HTML5, modern CSS, and minimal vanilla JavaScript where
+                needed.
+              </p>
             </details>
           </div>
         </div>
@@ -83,7 +97,9 @@
             </details>
             <details>
               <summary>Role at Company B</summary>
-              <p>Placeholder details for another expandable experience entry.</p>
+              <p>
+                Placeholder details for another expandable experience entry.
+              </p>
             </details>
           </div>
         </div>
@@ -100,7 +116,12 @@
         <div class="container cta-inner">
           <h2>Ready to build?</h2>
           <p>Schedule a call via Microsoft Bookings.</p>
-          <a class="btn btn-primary" href="https://bookings.microsoft.com/" rel="noopener">Open Microsoft Bookings</a>
+          <a
+            class="btn btn-primary"
+            href="https://bookings.microsoft.com/"
+            rel="noopener"
+            >Open Microsoft Bookings</a
+          >
         </div>
       </section>
     </main>
@@ -118,4 +139,3 @@
     <script src="js/main.js" defer></script>
   </body>
 </html>
-
