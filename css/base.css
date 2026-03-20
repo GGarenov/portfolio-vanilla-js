@@ -184,6 +184,29 @@ body {
   grid-template-columns: 1fr;
 }
 
+.services-grid .property-card {
+  /* Services are informational cards; keep the cursor consistent. */
+  cursor: default;
+}
+
+.services-grid .property-card img {
+  /* Make service photos consistent across the 2-column layout. */
+  height: 190px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.services-grid .property-body {
+  /* Align the text blocks even if image aspect ratios differ. */
+  display: flex;
+  flex-direction: column;
+  min-height: 142px;
+}
+
+.services-grid .property-body .property-note {
+  margin-top: auto;
+}
+
 .service-card {
   --accent: var(--primary);
   --accent-bg: rgba(37, 99, 235, 0.1);
@@ -369,9 +392,6 @@ body {
 }
 
 /* Testimonials */
-/* .testimonials {
-  text-align: center;
-} */
 
 .testimonials-heading {
   color: var(--text);
@@ -382,7 +402,6 @@ body {
 
 .testimonials-subtitle {
   max-width: 84ch;
-  /* margin: 0 auto var(--space-4); */
   margin: 0 0 16px;
 }
 
@@ -514,6 +533,55 @@ details[open] > summary {
   border: 1px solid var(--border);
   border-radius: 18px;
   padding: 24px;
+}
+
+.contact-inner {
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 24px;
+}
+
+.contact-form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field-label {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 12px 14px;
+  font: inherit;
+  background: #fff;
+  color: var(--text);
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form input:focus-visible,
+.contact-form textarea:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+
+.contact-actions {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 4px;
 }
 
 .footer-links {
