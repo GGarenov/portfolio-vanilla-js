@@ -12,7 +12,21 @@
     <header class="site-header">
       <div class="container header-inner">
         <a class="brand" href="index.html">Jessica Walters</a>
-        <nav aria-label="Primary navigation">
+        <nav aria-label="Primary navigation" class="site-nav">
+          <input
+            type="checkbox"
+            id="nav-toggle"
+            class="nav-toggle"
+            aria-label="Toggle navigation"
+          />
+          <label for="nav-toggle" class="nav-toggle-btn" aria-label="Open menu">
+            <span class="hamburger" aria-hidden="true">
+              <span></span>
+              <span></span>
+              <span></span>
+            </span>
+          </label>
+
           <ul class="nav-list">
             <li><a href="index.html#services">Services</a></li>
             <li><a href="index.html#faq">FAQ</a></li>
